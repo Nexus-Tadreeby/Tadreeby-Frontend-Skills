@@ -1,4 +1,3 @@
-import React from "react";
 import {
   LayoutDashboard,
   Landmark,
@@ -153,7 +152,7 @@ export default function Companies() {
           {/* Company cards grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {companiesData.map((company) => (
-              <div
+              <article
                 key={company.id}
                 className="relative rounded-2xl bg-white/90 backdrop-blur-md p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-blue-600/5 hover-lift transition-all duration-300 hover:shadow-[0_8px_30px_rgba(253,118,26,0.12)]"
               >
@@ -164,9 +163,9 @@ export default function Companies() {
                       {company.abbreviation}
                     </div>
                     <div>
-                      <h3 className="font-['Inter'] text-[15px] font-extrabold text-gray-900 leading-tight">
+                      <h2 className="font-['Inter'] text-[15px] font-extrabold text-gray-900 leading-tight">
                         {company.name}
-                      </h3>
+                      </h2>
                       <div className="mt-1 flex items-center gap-2">
                         <span className="rounded-md bg-orange-50 px-2 py-0.5 text-[10px] font-bold text-[#FD761A] border border-orange-100">
                           {company.industry}
@@ -230,7 +229,7 @@ export default function Companies() {
                 {company.status === "inactive" && (
                   <div className="absolute inset-0 rounded-2xl bg-white/40 backdrop-blur-[1px] pointer-events-none" />
                 )}
-              </div>
+              </article>
             ))}
           </div>
         </div>

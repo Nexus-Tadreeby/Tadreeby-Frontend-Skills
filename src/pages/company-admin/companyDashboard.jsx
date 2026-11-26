@@ -1,5 +1,5 @@
 // src/components/pages/company/CompanyDashboard.jsx
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Briefcase,
@@ -7,23 +7,11 @@ import {
   UserCheck,
   UserX,
   Calendar,
-  TrendingUp,
   Plus,
   Edit,
   Trash2,
-  Check,
-  X,
-  Eye,
-  Filter,
-  Search,
-  ChevronDown,
-  ChevronUp,
-  BarChart3,
-  PieChart,
-  Activity,
   LayoutDashboard,
   Settings,
-  Clock3,
   AlertCircle,
 } from "lucide-react";
 import {
@@ -208,14 +196,14 @@ const DashboardStats = ({ stats }) => {
 
 // ─── Chart Component ──────────────────────────────────────────────────
 const ChartComponent = ({ data }) => (
-  <div
+  <section
     className="rounded-[18px] border bg-white p-5 shadow-sm"
     style={{ borderColor: COLORS.border }}
   >
     <div className="flex items-center justify-between mb-4">
-      <h3 className="text-[16px] font-extrabold text-[#172033]">
+      <h2 className="text-[16px] font-extrabold text-[#172033]">
         Monthly Training Activity
-      </h3>
+      </h2>
       <div className="flex items-center gap-4 text-[11px] text-[#7B8497]">
         <span className="flex items-center gap-1.5">
           <span className="w-3 h-0.5 bg-[#0475FB]" /> Students
@@ -267,19 +255,19 @@ const ChartComponent = ({ data }) => (
         />
       </LineChart>
     </ResponsiveContainer>
-  </div>
+  </section>
 );
 
 // ─── Opportunity List ──────────────────────────────────────────────────
 const OpportunityList = ({ opportunities, onEdit, onDelete }) => (
-  <div
+  <section
     className="rounded-[18px] border bg-white p-5 shadow-sm"
     style={{ borderColor: COLORS.border }}
   >
     <div className="flex items-center justify-between mb-4">
-      <h3 className="text-[16px] font-extrabold text-[#172033]">
+      <h2 className="text-[16px] font-extrabold text-[#172033]">
         Training Opportunities
-      </h3>
+      </h2>
       <Button
         variant="blue"
         onClick={onEdit} // reusing onEdit to navigate to create page
@@ -295,9 +283,9 @@ const OpportunityList = ({ opportunities, onEdit, onDelete }) => (
           className="border border-[#E9EDF4] rounded-xl p-4 hover:shadow-md transition"
         >
           <div className="flex items-start justify-between">
-            <h4 className="text-[14px] font-extrabold text-[#172033]">
+            <h3 className="text-[14px] font-extrabold text-[#172033]">
               {opp.title}
-            </h4>
+            </h3>
             <span
               className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${
                 opp.totalSeats > 0
@@ -333,7 +321,7 @@ const OpportunityList = ({ opportunities, onEdit, onDelete }) => (
         </div>
       ))}
     </div>
-  </div>
+  </section>
 );
 
 // ─── MAIN COMPONENT ──────────────────────────────────────────────────

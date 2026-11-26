@@ -1,14 +1,39 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import { LoginPage } from "./pages/auth/LoginPage";
-import { RegistrationPage } from "./pages/auth/RegistrationPage";
-import { ForgotPasswordPage } from "./pages/auth/ForgotPasswordPage";
-import { CheckEmailPage } from "./pages/auth/CheckEmailPage";
-import { ResetPasswordPage } from "./pages/auth/ResetPasswordPage";
-import LandingPage from "./pages/LandingPage";
-
 import { ProtectedRoute } from "./routes/ProtectedRoute";
-import RoleLayout from "./layout/RoleLayout";
+
+// Public pages: each one is its own chunk, fetched only when its route is hit.
+// Landing and Authentication code never end up in the entry bundle (or in each
+// other's chunk, except for genuinely shared modules such as Footer/Button).
+const LandingPage = lazy(() => import("./pages/LandingPage"));
+const LoginPage = lazy(() =>
+  import("./pages/auth/LoginPage").then((m) => ({ default: m.LoginPage })),
+);
+const RegistrationPage = lazy(() =>
+  import("./pages/auth/RegistrationPage").then((m) => ({
+    default: m.RegistrationPage,
+  })),
+);
+const ForgotPasswordPage = lazy(() =>
+  import("./pages/auth/ForgotPasswordPage").then((m) => ({
+    default: m.ForgotPasswordPage,
+  })),
+);
+const CheckEmailPage = lazy(() =>
+  import("./pages/auth/CheckEmailPage").then((m) => ({
+    default: m.CheckEmailPage,
+  })),
+);
+const ResetPasswordPage = lazy(() =>
+  import("./pages/auth/ResetPasswordPage").then((m) => ({
+    default: m.ResetPasswordPage,
+  })),
+);
+
+// Role shell (sidebar, page header, nav config, lucide icons) is only needed
+// behind ProtectedRoute, so keep it out of the Landing/Auth entry path.
+const RoleLayout = lazy(() => import("./layout/RoleLayout"));
+
 //import { UnauthorizedPage } from "./components/auth/UnauthorizedPage";
 
 const SuperAdminDashboard = lazy(
@@ -35,8 +60,9 @@ const Internships = lazy(
 const InternshipDetails = lazy(
   () => import("./pages/opportunities/OpportunityDetails"),
 );
-import NotFoundPage from "./pages/NotFoundPage";
-import TermsAndPrivacyPage from "./pages/TermsAndPrivacyPage";
+// Other public pages (linked from Landing/Auth) are also kept out of the entry.
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
+const TermsAndPrivacyPage = lazy(() => import("./pages/TermsAndPrivacyPage"));
 const MyInternship = lazy(
   () => import("./pages/student/internship/my-internship"),
 );

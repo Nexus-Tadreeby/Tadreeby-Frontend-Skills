@@ -8,7 +8,7 @@ import {
   UniversityIcon,
   CompanyIcon,
   MatchingIcon,
-} from "../components/common/Icons";
+} from "../components/landing/LandingIcons";
 import { Footer } from "../layout/Footer";
 
 // ---------- Scroll Animation Hook ----------
@@ -115,6 +115,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => (
         : "border-gray-200 hover:border-gray-300"
     }`}
   >
+    <h3>
     <button
       className="flex justify-between items-center w-full px-6 py-5 text-left cursor-pointer group"
       onClick={onToggle}
@@ -143,6 +144,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => (
         </svg>
       </span>
     </button>
+    </h3>
     <div
       style={{
         maxHeight: isOpen ? "400px" : "0px",
@@ -541,6 +543,7 @@ const LandingPage = () => {
         </a>
       </Header>
 
+      <main>
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center pt-[120px] pb-[100px] px-4 bg-gradient-to-b from-[#F2F7FF] to-[#FFF8F4] overflow-hidden sm:pt-[130px]">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto animate-fade-in-up">
@@ -1014,6 +1017,7 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
       <WhatsAppButton />

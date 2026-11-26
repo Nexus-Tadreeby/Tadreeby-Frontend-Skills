@@ -4,7 +4,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Label } from "../common/Label";
 import {
-  CheckIcon,
   InfoIcon,
   WarnIcon,
   UploadIcon,

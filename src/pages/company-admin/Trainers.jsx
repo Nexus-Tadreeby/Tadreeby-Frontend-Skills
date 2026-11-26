@@ -166,16 +166,16 @@ export default function Trainers() {
                 </div>
               ) : (
                 trainers.map((trainer) => (
-                  <div
+                  <article
                     key={trainer.id || trainer.userId}
                     className="border border-[#E9EDF4] rounded-xl p-4 hover:shadow-md transition bg-white"
                   >
                     <div className="flex items-start justify-between">
                       <div>
-                        <h4 className="text-[14px] font-extrabold text-[#172033]">
+                        <h2 className="text-[14px] font-extrabold text-[#172033]">
                           {trainer.user?.firstName || trainer.firstName}{" "}
                           {trainer.user?.lastName || trainer.lastName}
-                        </h4>
+                        </h2>
                         <p className="text-[12px] text-[#7B8497]">
                           {trainer.position || "No position"}
                         </p>
@@ -219,7 +219,7 @@ export default function Trainers() {
                         <Trash2 size={14} /> Delete
                       </button>
                     </div>
-                  </div>
+                  </article>
                 ))
               )}
             </div>

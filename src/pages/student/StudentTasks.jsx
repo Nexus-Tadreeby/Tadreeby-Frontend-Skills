@@ -176,7 +176,7 @@ const EmptyState = ({ status, search }) => {
       <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-sm">
         <Inbox size={28} className="text-[#7B8497]" />
       </div>
-      <h3 className="mt-4 text-[15px] font-bold text-[#172033]">{message}</h3>
+      <h2 className="mt-4 text-[15px] font-bold text-[#172033]">{message}</h2>
       <p className="mt-1 text-[12px] text-[#7B8497]">{description}</p>
     </div>
   );
@@ -415,7 +415,7 @@ const TaskDetailsDrawer = ({ task, onClose, onSubmitted }) => {
         onClick={onClose}
         aria-hidden="true"
       />
-      <aside
+      <div
         role="dialog"
         aria-modal="true"
         aria-labelledby="task-details-title"
@@ -633,7 +633,7 @@ const TaskDetailsDrawer = ({ task, onClose, onSubmitted }) => {
             )}
           </section>
         </div>
-      </aside>
+      </div>
     </>
   );
 };
@@ -961,7 +961,7 @@ export default function StudentTasks() {
           </div>
 
           {/* Footer */}
-          <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-[#E9EDF4] pt-4 text-center sm:flex-row sm:text-left">
+          <footer className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-[#E9EDF4] pt-4 text-center sm:flex-row sm:text-left">
             <div className="flex items-center gap-4 text-[10px] font-medium text-[#7B8497]">
               <span>Help center</span>
               <span className="h-1 w-1 rounded-full bg-[#D1D5DB]" />
@@ -976,7 +976,7 @@ export default function StudentTasks() {
             <p className="text-[9px] font-medium text-gray-400">
               Tadreeby helps you stay on track throughout your field training.
             </p>
-          </div>
+          </footer>
         </div>
       </main>
 

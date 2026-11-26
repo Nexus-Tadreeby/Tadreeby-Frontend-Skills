@@ -92,9 +92,9 @@ export function Footer() {
                 </p>
               </div>
               <div>
-                <h4 className="text-[15px] font-bold text-[#111827]">
+                <h2 className="text-[15px] font-bold text-[#111827]">
                   Platform
-                </h4>
+                </h2>
                 <ul className="mt-4 space-y-3 text-[14px] text-[#6B7280]">
                   <li>
                     <a
@@ -122,9 +122,9 @@ export function Footer() {
                 </ul>
               </div>
               <div>
-                <h4 className="text-[15px] font-bold text-[#111827]">
+                <h2 className="text-[15px] font-bold text-[#111827]">
                   Quick Links
-                </h4>
+                </h2>
                 <ul className="mt-4 space-y-3 text-[14px] text-[#6B7280]">
                   <li>
                     <a href="#" className="hover:underline">
@@ -152,7 +152,7 @@ export function Footer() {
                 </ul>
               </div>
               <div>
-                <h4 className="text-[15px] font-bold text-[#111827]">Legal</h4>
+                <h2 className="text-[15px] font-bold text-[#111827]">Legal</h2>
                 <ul className="mt-4 space-y-3 text-[14px] text-[#6B7280]">
                   <li>
                     <Link
@@ -173,9 +173,9 @@ export function Footer() {
                 </ul>
               </div>
               <div>
-                <h4 className="text-[15px] font-bold text-[#111827]">
+                <h2 className="text-[15px] font-bold text-[#111827]">
                   Contact
-                </h4>
+                </h2>
                 <div className="mt-4 space-y-3 text-[14px] text-[#6B7280]">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 bg-[#FFEDD4] rounded-full flex items-center justify-center">

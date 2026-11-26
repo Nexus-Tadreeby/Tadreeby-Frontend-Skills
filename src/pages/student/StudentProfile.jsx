@@ -1237,9 +1237,9 @@ const DocumentsCard = ({
               </div>
 
               {/* Text */}
-              <h3 className="text-center text-[15px] font-extrabold tracking-tight text-gray-900">
+              <h2 className="text-center text-[15px] font-extrabold tracking-tight text-gray-900">
                 Delete your CV?
-              </h3>
+              </h2>
               <p className="mt-1.5 text-center text-[12px] leading-5 text-gray-500">
                 Are you sure you want to remove your uploaded CV? <br />
                 You can always upload a new one later.
@@ -1687,9 +1687,9 @@ const CompletionChecklist = ({ completion, onItemClick }) => {
             <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#1677FF]">
               Profile setup
             </p>
-            <h3 className="mt-0.5 text-sm font-extrabold text-gray-900">
+            <h2 className="mt-0.5 text-sm font-extrabold text-gray-900">
               Profile Completion
-            </h3>
+            </h2>
           </div>
 
           <div className="relative flex h-20 w-20 items-center justify-center">

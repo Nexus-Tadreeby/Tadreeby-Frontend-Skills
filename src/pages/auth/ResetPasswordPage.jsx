@@ -1,6 +1,7 @@
 // ResetPasswordPage.jsx
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Footer } from "../../layout/Footer";
 import { Button } from "../../components/common/Button";
 import { InputField } from "../../components/common/InputField";

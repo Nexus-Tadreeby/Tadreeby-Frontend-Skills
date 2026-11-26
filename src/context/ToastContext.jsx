@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useCallback } from "react";
-import { Lock, AlertCircle, CheckCircle2, Info, X, ShieldAlert } from "lucide-react";
+import { AlertCircle, CheckCircle2, Info, X, ShieldAlert } from "lucide-react";
 
 const ToastContext = createContext(null);
 

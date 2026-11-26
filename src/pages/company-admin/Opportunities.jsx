@@ -155,14 +155,14 @@ export default function Opportunities() {
                 </div>
               ) : (
                 opportunities.map((opp) => (
-                  <div
+                  <article
                     key={opp.id}
                     className="border border-[#E9EDF4] rounded-xl p-4 hover:shadow-md transition bg-white"
                   >
                     <div className="flex items-start justify-between">
-                      <h4 className="text-[14px] font-extrabold text-[#172033]">
+                      <h2 className="text-[14px] font-extrabold text-[#172033]">
                         {opp.title}
-                      </h4>
+                      </h2>
                       <span
                         className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${
                           opp.totalSeats > 0
@@ -199,7 +199,7 @@ export default function Opportunities() {
                         <Trash2 size={14} /> Delete
                       </button>
                     </div>
-                  </div>
+                  </article>
                 ))
               )}
             </div>
