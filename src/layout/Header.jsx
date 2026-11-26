@@ -1,7 +1,6 @@
 // Header.jsx
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../assets/logo.svg";
 
 export function Header({
   className = "fixed top-0 left-0 right-0 z-50 transition-all duration-300 top-3 sm:top-4",
@@ -38,7 +37,11 @@ export function Header({
             to="/"
             className="cursor-pointer transition-transform duration-300 hover:scale-105 flex-shrink-0"
           >
-            <img src={logo} alt="Tadreeby Logo" className="h-7 sm:h-8 w-auto mb-1" />
+            <img
+              src="/assets/logo.svg"
+              alt="Tadreeby Logo"
+              className="h-7 sm:h-8 w-auto mb-1"
+            />
           </Link>
 
           {/* Desktop Navigation – centered in the available space */}
@@ -69,18 +72,21 @@ export function Header({
               >
                 <span
                   aria-hidden="true"
-                  className={`block w-6 h-0.5 bg-gray-600 transition-transform duration-300 ${isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
-                    }`}
+                  className={`block w-6 h-0.5 bg-gray-600 transition-transform duration-300 ${
+                    isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
+                  }`}
                 />
                 <span
                   aria-hidden="true"
-                  className={`block w-6 h-0.5 bg-gray-600 transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-0" : ""
-                    }`}
+                  className={`block w-6 h-0.5 bg-gray-600 transition-opacity duration-300 ${
+                    isMobileMenuOpen ? "opacity-0" : ""
+                  }`}
                 />
                 <span
                   aria-hidden="true"
-                  className={`block w-6 h-0.5 bg-gray-600 transition-transform duration-300 ${isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-                    }`}
+                  className={`block w-6 h-0.5 bg-gray-600 transition-transform duration-300 ${
+                    isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+                  }`}
                 />
               </button>
             )}
@@ -94,7 +100,10 @@ export function Header({
             className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-x border-b border-gray-200/50 shadow-xl min-[945px]:hidden animate-fade-in-up rounded-b-2xl overflow-hidden"
           >
             <div className="flex flex-col items-center gap-4 py-6 px-4 text-sm font-medium text-[#374151]">
-              <nav aria-label="Mobile" className="flex flex-col items-center gap-4">
+              <nav
+                aria-label="Mobile"
+                className="flex flex-col items-center gap-4"
+              >
                 {children}
               </nav>
               <div className="flex flex-col items-center gap-3 mt-2 border-t border-gray-200 pt-4 w-full">
