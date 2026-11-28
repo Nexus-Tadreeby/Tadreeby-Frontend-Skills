@@ -10,14 +10,10 @@ import {
   Landmark,
   Users,
   ScanEye,
-  MessageCircle,
   Settings,
-  Bell,
   GraduationCap,
   Briefcase,
-  ChevronRight,
   ArrowRight,
-  Sun,
   User,
 } from "lucide-react";
 import {
@@ -263,11 +259,11 @@ function StatCard({
 
 function ApplicationsChart() {
   return (
-    <div className="flex-1 rounded-2xl bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
+    <section className="flex-1 rounded-2xl bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
       <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
-        <h3 className="text-[22px] font-bold tracking-tight text-gray-700">
+        <h2 className="text-[22px] font-bold tracking-tight text-gray-700">
           Monthly Internship Applications
-        </h3>
+        </h2>
         <div className="flex gap-2">
           {RANGE_OPTIONS.map((opt) => (
             <button
@@ -321,7 +317,7 @@ function ApplicationsChart() {
           </LineChart>
         </ResponsiveContainer>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -331,8 +327,8 @@ function ApplicationsChart() {
 
 function RecentActivities() {
   return (
-    <div className="flex h-full flex-col rounded-2xl bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
-      <h3 className="text-[22px] font-bold text-gray-700">Recent Activities</h3>
+    <section className="flex h-full flex-col rounded-2xl bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
+      <h2 className="text-[22px] font-bold text-gray-700">Recent Activities</h2>
       <ul className="mt-5 flex-1 space-y-5">
         {RECENT_ACTIVITIES.map((item, i) => (
           <li key={i} className="flex items-start gap-3">
@@ -358,7 +354,7 @@ function RecentActivities() {
       <button className="mt-4 flex items-center gap-1 self-end text-[12px] font-medium text-blue-600 hover:underline">
         View All <ArrowRight className="h-3 w-3" />
       </button>
-    </div>
+    </section>
   );
 }
 
@@ -368,10 +364,10 @@ function RecentActivities() {
 
 function MostRequiredInternships() {
   return (
-    <div className="rounded-2xl bg-white p-6 shadow-[0_4px_8px_1px_rgba(219,234,254,0.7)]">
-      <h3 className="mb-4 text-[16px] font-bold text-gray-700">
+    <section className="rounded-2xl bg-white p-6 shadow-[0_4px_8px_1px_rgba(219,234,254,0.7)]">
+      <h2 className="mb-4 text-[16px] font-bold text-gray-700">
         Most Required Internships
-      </h3>
+      </h2>
       <div className="flex flex-wrap gap-2">
         {INTERNSHIP_TAGS.map((tag) => (
           <span
@@ -382,7 +378,7 @@ function MostRequiredInternships() {
           </span>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -392,10 +388,10 @@ function MostRequiredInternships() {
 
 function QuickActions() {
   return (
-    <div className="rounded-2xl bg-white p-6 shadow-[0_4px_8px_1px_rgba(219,234,254,0.7)]">
-      <h3 className="mb-4 text-[16px] font-bold text-gray-700">
+    <section className="rounded-2xl bg-white p-6 shadow-[0_4px_8px_1px_rgba(219,234,254,0.7)]">
+      <h2 className="mb-4 text-[16px] font-bold text-gray-700">
         Quick Actions
-      </h3>
+      </h2>
       <div className="flex flex-wrap gap-3">
         <button className="rounded-full border border-blue-500 bg-blue-50 px-5 py-2 text-[11px] font-medium text-blue-600 hover:bg-blue-100">
           Create University
@@ -404,7 +400,7 @@ function QuickActions() {
           Create Company
         </button>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -420,11 +416,11 @@ function ApplicationStatusBreakdownCard() {
   ];
 
   return (
-    <div className="flex h-full flex-col justify-between rounded-2xl bg-white/90 backdrop-blur-md p-6 shadow-[0_4px_16px_rgba(0,0,0,0.04)] border border-blue-600/5 hover-lift transition-all duration-300">
+    <section className="flex h-full flex-col justify-between rounded-2xl bg-white/90 backdrop-blur-md p-6 shadow-[0_4px_16px_rgba(0,0,0,0.04)] border border-blue-600/5 hover-lift transition-all duration-300">
       <div className="flex items-center justify-between">
-        <h3 className="text-[16px] font-extrabold text-gray-800 font-['Inter']">
+        <h2 className="text-[16px] font-extrabold text-gray-800 font-['Inter']">
           Application Breakdown
-        </h3>
+        </h2>
         <span className="text-[11px] font-bold text-[#1677ff] bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">
           Live Status
         </span>
@@ -475,7 +471,7 @@ function ApplicationStatusBreakdownCard() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

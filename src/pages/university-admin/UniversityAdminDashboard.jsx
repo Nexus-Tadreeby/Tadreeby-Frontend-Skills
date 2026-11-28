@@ -204,9 +204,9 @@ export default function UniversityAdminDashboard() {
                 <AlertCircle size={32} />
               </div>
             </div>
-            <h2 className="text-[22px] font-extrabold text-[#172033]">
+            <h1 className="text-[22px] font-extrabold text-[#172033]">
               Access Denied
-            </h2>
+            </h1>
             <p className="mt-2 text-[13px] text-[#7B8497]">{error}</p>
             <button
               onClick={() => navigate("/login")}

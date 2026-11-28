@@ -1,6 +1,6 @@
 // src/contexts/AuthContext.jsx
 import { createContext, useContext, useState } from "react";
-import { clearApiCache } from "../services/api";
+import { clearApiCache } from "../services/apiCache";
 
 const AuthContext = createContext(null);
 

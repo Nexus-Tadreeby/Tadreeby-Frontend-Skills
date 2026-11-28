@@ -656,7 +656,7 @@ export default function MyInternship() {
                             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#EAF3FF] text-[#0475FB]">
                                 <Info size={32} />
                             </div>
-                            <h3 className="mt-4 text-[16px] font-extrabold text-[#172033]">No Internship Found</h3>
+                            <h2 className="mt-4 text-[16px] font-extrabold text-[#172033]">No Internship Found</h2>
                             <p className="mt-1 max-w-sm text-[13px] text-[#7B8497]">
                                 You must enroll in an internship first to track attendance.
                             </p>
@@ -671,7 +671,7 @@ export default function MyInternship() {
                         </div>
 
                         {/* Footer */}
-                        <div className="mt-6 flex flex-col items-center justify-between gap-2 border-t border-[#E9EDF4] pt-4 text-center sm:flex-row sm:text-left">
+                        <footer className="mt-6 flex flex-col items-center justify-between gap-2 border-t border-[#E9EDF4] pt-4 text-center sm:flex-row sm:text-left">
                             <div className="flex items-center gap-4 text-[10px] font-medium text-[#7B8497]">
                                 <span>Help center</span>
                                 <span className="h-1 w-1 rounded-full bg-[#D1D5DB]" />
@@ -682,7 +682,7 @@ export default function MyInternship() {
                             <p className="text-[9px] font-medium text-gray-400">
                                 Tadreeby helps you stay on track throughout your field training.
                             </p>
-                        </div>
+                        </footer>
                     </div>
                 </main>
             </div>
@@ -707,7 +707,7 @@ export default function MyInternship() {
                                 <AlertCircle size={32} />
                             </div>
                         </div>
-                        <h2 className="text-[22px] font-extrabold text-[#172033]">Failed to load internship</h2>
+                        <h1 className="text-[22px] font-extrabold text-[#172033]">Failed to load internship</h1>
                         <p className="mt-2 text-[13px] text-[#7B8497]">
                             There was an error fetching your internship details. Please try again later.
                         </p>
@@ -897,10 +897,10 @@ export default function MyInternship() {
                         {/* LEFT COLUMN */}
                         <div className="space-y-5">
                             {/* 1. Progress Card */}
-                            <div className="rounded-[18px] border bg-white p-5 shadow-sm" style={{ borderColor: COLORS.border }}>
+                            <section className="rounded-[18px] border bg-white p-5 shadow-sm" style={{ borderColor: COLORS.border }}>
                                 <div className="flex items-start justify-between">
                                     <div>
-                                        <h3 className="text-[16px] font-extrabold text-[#172033]">Internship progress</h3>
+                                        <h2 className="text-[16px] font-extrabold text-[#172033]">Internship progress</h2>
                                         <p className="mt-1 text-[10px] text-[#7B8497]">Your overall training completion</p>
                                     </div>
                                 </div>
@@ -931,13 +931,13 @@ export default function MyInternship() {
                                         <span>Ends {internship.endDate}</span>
                                     </div>
                                 </div>
-                            </div>
+                            </section>
 
                             {/* 2. Next Task */}
-                            <div className="rounded-[18px] border bg-white p-5 shadow-sm" style={{ borderColor: COLORS.border }}>
+                            <section className="rounded-[18px] border bg-white p-5 shadow-sm" style={{ borderColor: COLORS.border }}>
                                 <div className="flex items-center justify-between">
                                     <div>
-                                        <h3 className="text-[16px] font-extrabold text-[#172033]">Your next task</h3>
+                                        <h2 className="text-[16px] font-extrabold text-[#172033]">Your next task</h2>
                                         <p className="mt-1 text-[10px] text-[#7B8497]">Keep your internship moving forward</p>
                                     </div>
                                     <button className="text-[10px] font-extrabold text-[#0475FB] hover:underline">View all tasks</button>
@@ -979,13 +979,13 @@ export default function MyInternship() {
                                         Open task <ArrowUpRight size={12} />
                                     </button>
                                 </div>
-                            </div>
+                            </section>
 
                             {/* 3. Tasks List */}
-                            <div className="rounded-[18px] border bg-white p-5 shadow-sm" style={{ borderColor: COLORS.border }}>
+                            <section className="rounded-[18px] border bg-white p-5 shadow-sm" style={{ borderColor: COLORS.border }}>
                                 <div className="flex items-center justify-between">
                                     <div>
-                                        <h3 className="text-[16px] font-extrabold text-[#172033]">Training tasks</h3>
+                                        <h2 className="text-[16px] font-extrabold text-[#172033]">Training tasks</h2>
                                         <p className="mt-1 text-[10px] text-[#7B8497]">Tasks assigned during your internship</p>
                                     </div>
                                     <button className="text-[10px] font-extrabold text-[#0475FB] hover:underline">View all</button>
@@ -1045,13 +1045,13 @@ export default function MyInternship() {
                                         </div>
                                     ))}
                                 </div>
-                            </div>
+                            </section>
 
                             {/* 4. Attendance */}
-                            <div className="rounded-[18px] border bg-white p-5 shadow-sm" style={{ borderColor: COLORS.border }}>
+                            <section className="rounded-[18px] border bg-white p-5 shadow-sm" style={{ borderColor: COLORS.border }}>
                                 <div className="flex items-center justify-between">
                                     <div>
-                                        <h3 className="text-[16px] font-extrabold text-[#172033]">Attendance</h3>
+                                        <h2 className="text-[16px] font-extrabold text-[#172033]">Attendance</h2>
                                         <p className="mt-1 text-[10px] text-[#7B8497]">Your training attendance overview</p>
                                     </div>
                                     <button
@@ -1103,13 +1103,13 @@ export default function MyInternship() {
                                     </div>
                                     <button className="text-[10px] font-extrabold text-[#0475FB]">Details</button>
                                 </div>
-                            </div>
+                            </section>
 
                             {/* 5. Performance */}
-                            <div className="rounded-[18px] border bg-white p-5 shadow-sm" style={{ borderColor: COLORS.border }}>
+                            <section className="rounded-[18px] border bg-white p-5 shadow-sm" style={{ borderColor: COLORS.border }}>
                                 <div className="flex items-center justify-between">
                                     <div>
-                                        <h3 className="text-[16px] font-extrabold text-[#172033]">Performance</h3>
+                                        <h2 className="text-[16px] font-extrabold text-[#172033]">Performance</h2>
                                         <p className="mt-1 text-[10px] text-[#7B8497]">Your latest internship performance</p>
                                     </div>
                                     <button className="text-[10px] font-extrabold text-[#0475FB] hover:underline">View evaluations</button>
@@ -1181,13 +1181,13 @@ export default function MyInternship() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </section>
 
                             {/* 6. Milestones */}
-                            <div className="rounded-[18px] border bg-white p-5 shadow-sm" style={{ borderColor: COLORS.border }}>
+                            <section className="rounded-[18px] border bg-white p-5 shadow-sm" style={{ borderColor: COLORS.border }}>
                                 <div className="flex items-start justify-between">
                                     <div>
-                                        <h3 className="text-[16px] font-extrabold text-[#172033]">Training milestones</h3>
+                                        <h2 className="text-[16px] font-extrabold text-[#172033]">Training milestones</h2>
                                         <p className="mt-1 text-[10px] text-[#7B8497]">Important stages throughout your internship</p>
                                     </div>
                                 </div>
@@ -1224,13 +1224,13 @@ export default function MyInternship() {
                                         </div>
                                     ))}
                                 </div>
-                            </div>
+                            </section>
 
                             {/* 7. Recent Activity */}
-                            <div className="rounded-[18px] border bg-white p-5 shadow-sm" style={{ borderColor: COLORS.border }}>
+                            <section className="rounded-[18px] border bg-white p-5 shadow-sm" style={{ borderColor: COLORS.border }}>
                                 <div className="flex items-center justify-between">
                                     <div>
-                                        <h3 className="text-[16px] font-extrabold text-[#172033]">Recent activity</h3>
+                                        <h2 className="text-[16px] font-extrabold text-[#172033]">Recent activity</h2>
                                         <p className="mt-1 text-[10px] text-[#7B8497]">Latest updates from your internship</p>
                                     </div>
                                     <button className="text-[10px] font-extrabold text-[#0475FB] hover:underline">View activity</button>
@@ -1253,7 +1253,7 @@ export default function MyInternship() {
                                         );
                                     })}
                                 </div>
-                            </div>
+                            </section>
                         </div>
 
                         {/* RIGHT COLUMN – Sidebar */}
@@ -1374,7 +1374,7 @@ export default function MyInternship() {
                     </div>
 
                     {/* Footer */}
-                    <div className="mt-6 flex flex-col items-center justify-between gap-2 border-t border-[#E9EDF4] pt-4 text-center sm:flex-row sm:text-left">
+                    <footer className="mt-6 flex flex-col items-center justify-between gap-2 border-t border-[#E9EDF4] pt-4 text-center sm:flex-row sm:text-left">
                         <div className="flex items-center gap-4 text-[10px] font-medium text-[#7B8497]">
                             <span>Help center</span>
                             <span className="h-1 w-1 rounded-full bg-[#D1D5DB]" />
@@ -1385,7 +1385,7 @@ export default function MyInternship() {
                         <p className="text-[9px] font-medium text-gray-400">
                             Tadreeby helps you stay on track throughout your field training.
                         </p>
-                    </div>
+                    </footer>
                 </div>
             </main>
         </div>

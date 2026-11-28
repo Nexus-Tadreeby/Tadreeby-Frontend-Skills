@@ -457,7 +457,7 @@ const ActiveSessionBanner = ({
   // const buttonAction = isCheckedIn ? onCheckOut : onCheckIn;
 
   return (
-    <div
+    <section
       className="relative overflow-hidden rounded-[22px] p-5 sm:p-6 print:border print:border-gray-200 print:shadow-none print:bg-white"
       style={{
         background: isCheckedIn
@@ -565,7 +565,7 @@ const ActiveSessionBanner = ({
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -657,9 +657,9 @@ const EmptyState = () => (
     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#EAF3FF]">
       <Calendar size={21} color={COLORS.primary} strokeWidth={1.8} />
     </div>
-    <h3 className="mt-4 text-[14px] font-bold text-[#172033]">
+    <h2 className="mt-4 text-[14px] font-bold text-[#172033]">
       No attendance records
-    </h3>
+    </h2>
     <p className="mt-1 max-w-sm text-[11px] leading-relaxed text-[#7B8497]">
       Your check‑in and check‑out logs will appear here.
     </p>
@@ -1061,9 +1061,9 @@ const Attendance = () => {
                     <AlertCircle size={20} color={COLORS.accent} />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-[15px] font-extrabold text-[#172033]">
+                    <h2 className="text-[15px] font-extrabold text-[#172033]">
                       Confirm Check Out
-                    </h4>
+                    </h2>
                     <p className="mt-1 text-[12px] text-[#7B8497]">
                       You are about to check out from your current session.
                     </p>
@@ -1113,9 +1113,9 @@ const Attendance = () => {
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex items-center justify-between">
-                  <h4 className="text-[15px] font-extrabold text-[#172033]">
+                  <h2 className="text-[15px] font-extrabold text-[#172033]">
                     Sessions on {selectedSessions[0]?.date}
-                  </h4>
+                  </h2>
                   <button
                     type="button"
                     onClick={() => setShowDetailModal(false)}
@@ -1151,7 +1151,7 @@ const Attendance = () => {
             </div>
           )}
 
-          <div className="mt-6 flex flex-col items-center justify-between gap-2 border-t border-[#E9EDF4] pt-4 text-center sm:flex-row sm:text-left">
+          <footer className="mt-6 flex flex-col items-center justify-between gap-2 border-t border-[#E9EDF4] pt-4 text-center sm:flex-row sm:text-left">
             <div className="flex items-center gap-4 text-[10px] font-medium text-[#7B8497]">
               <span>Help center</span>
               <span className="h-1 w-1 rounded-full bg-[#D1D5DB]" />
@@ -1166,7 +1166,7 @@ const Attendance = () => {
             <p className="text-[9px] font-medium text-gray-400">
               Tadreeby helps you stay on track throughout your field training.
             </p>
-          </div>
+          </footer>
         </div>
       </main>
 

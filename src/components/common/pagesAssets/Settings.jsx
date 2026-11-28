@@ -770,7 +770,7 @@ const SettingsSidebar = ({ activeTab, onTabChange }) => {
   return (
     <aside className="w-[260px] shrink-0 border-r border-gray-200 bg-white/80 backdrop-blur-md rounded-l-2xl p-4">
       <div className="mb-6 px-2">
-        <h2 className="text-sm font-bold text-gray-700">Settings</h2>
+        <h1 className="text-sm font-bold text-gray-700">Settings</h1>
         <p className="mt-0.5 text-xs text-gray-400">Manage your account</p>
       </div>
       <nav className="space-y-1">
@@ -1457,7 +1457,7 @@ const Settings = () => {
       />
 
       <div className="flex-1 flex flex-col min-h-screen">
-        <div className="relative flex-1 overflow-y-auto">
+        <main className="relative flex-1 overflow-y-auto">
           <div className="pointer-events-none absolute top-1/4 -left-20 h-80 w-80 rounded-full bg-blue-400/10 blur-3xl" />
           <div className="pointer-events-none absolute bottom-1/4 -right-20 h-96 w-96 rounded-full bg-orange-400/10 blur-3xl" />
           <div className="pointer-events-none absolute top-10 right-1/3 h-64 w-64 rounded-full bg-indigo-400/10 blur-3xl" />
@@ -1501,7 +1501,7 @@ const Settings = () => {
               </div>
             </div>
           </div>
-        </div>
+        </main>
       </div>
 
       {/* <AIAssistant /> */}

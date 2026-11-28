@@ -2,19 +2,17 @@
 // const API_BASE_URL = 'https://tadreeby-api.onrender.com';
 export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:6060';
 
-// Shared GET cache for every role. It survives route unmounts, deduplicates
-// concurrent requests (including React StrictMode mounts), and is cleared after
-// mutations or when the authenticated user changes.
-const responseCache = new Map();
-const pendingRequests = new Map();
-const DEFAULT_CACHE_TTL = 2 * 60 * 1000;
+// Shared GET cache for every role (implementation lives in ./apiCache so the
+// entry bundle does not have to load this whole API client).
+import {
+  responseCache,
+  pendingRequests,
+  DEFAULT_CACHE_TTL,
+  getCacheKey,
+  clearApiCache,
+} from './apiCache';
 
-const getCacheKey = (endpoint, token) => `${token || 'anonymous'}:${endpoint}`;
-
-export const clearApiCache = () => {
-  responseCache.clear();
-  pendingRequests.clear();
-};
+export { clearApiCache };
 
 // const apiRequest = async (endpoint, options = {}) => {
 //   const token = localStorage.getItem('accessToken');

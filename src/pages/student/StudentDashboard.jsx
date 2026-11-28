@@ -1,5 +1,5 @@
 // src/components/pages/student/StudentDashboard.jsx
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   LayoutDashboard,
@@ -8,19 +8,15 @@ import {
   Clock,
   Settings,
   Search,
-  Bell,
   CalendarDays,
   CheckCircle2,
   ClipboardList,
-  MapPin,
   ChevronDown,
   ArrowUpRight,
   Sparkles,
   Brain,
   TrendingUp,
-  Target,
   Timer,
-  AlertCircle,
   MoreHorizontal,
   Check,
   Coffee,
@@ -181,7 +177,7 @@ const InternshipBanner = ({
     activeInternship?.company?.name || `${universityName} Partner`;
 
   return (
-    <div
+    <section
       className="relative overflow-hidden rounded-[22px] p-5 sm:p-6"
       style={{
         background:
@@ -242,7 +238,7 @@ const InternshipBanner = ({
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -370,7 +366,7 @@ const AttendanceCalendar = ({ attendance }) => {
     0;
 
   return (
-    <div
+    <section
       className="rounded-[20px] border bg-white p-5"
       style={{ borderColor: COLORS.border }}
     >
@@ -378,9 +374,9 @@ const AttendanceCalendar = ({ attendance }) => {
         <div>
           <div className="flex items-center gap-2">
             <CalendarDays size={17} color={COLORS.primary} />
-            <h3 className="text-[14px] font-extrabold text-[#172033]">
+            <h2 className="text-[14px] font-extrabold text-[#172033]">
               Attendance
-            </h3>
+            </h2>
           </div>
           <p className="mt-1 text-[10px] font-medium text-gray-400">
             Track your internship attendance
@@ -450,7 +446,7 @@ const AttendanceCalendar = ({ attendance }) => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -479,15 +475,15 @@ const AttendanceChart = ({ attendance }) => {
   const max = Math.max(1, ...weekAttendance.map((d) => d.value));
 
   return (
-    <div
+    <section
       className="rounded-[20px] border bg-white p-5"
       style={{ borderColor: COLORS.border }}
     >
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="text-[14px] font-extrabold text-[#172033]">
+          <h2 className="text-[14px] font-extrabold text-[#172033]">
             Hours Activity
-          </h3>
+          </h2>
           <p className="mt-1 text-[10px] font-medium text-gray-400">
             Your attendance hours this week
           </p>
@@ -541,7 +537,7 @@ const AttendanceChart = ({ attendance }) => {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -668,17 +664,17 @@ const AIMiniStat = ({ label, value }) => (
 const AssignmentsCard = ({ tasks }) => {
   if (!tasks || tasks.length === 0) {
     return (
-      <div
+      <section
         className="rounded-[20px] border bg-white p-5"
         style={{ borderColor: COLORS.border }}
       >
-        <h3 className="text-[14px] font-extrabold text-[#172033]">
+        <h2 className="text-[14px] font-extrabold text-[#172033]">
           Assignments
-        </h3>
+        </h2>
         <p className="mt-1 text-[10px] font-medium text-gray-400">
           No tasks assigned yet
         </p>
-      </div>
+      </section>
     );
   }
 
@@ -717,15 +713,15 @@ const AssignmentsCard = ({ tasks }) => {
   });
 
   return (
-    <div
+    <section
       className="rounded-[20px] border bg-white p-5"
       style={{ borderColor: COLORS.border }}
     >
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="text-[14px] font-extrabold text-[#172033]">
+          <h2 className="text-[14px] font-extrabold text-[#172033]">
             Assignments
-          </h3>
+          </h2>
           <p className="mt-1 text-[10px] font-medium text-gray-400">
             Tasks from your internship
           </p>
@@ -790,7 +786,7 @@ const AssignmentsCard = ({ tasks }) => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -833,15 +829,15 @@ const InternshipProgress = ({ internships }) => {
   ];
 
   return (
-    <div
+    <section
       className="rounded-[20px] border bg-white p-5"
       style={{ borderColor: COLORS.border }}
     >
       <div className="flex items-start justify-between">
         <div>
-          <h3 className="text-[14px] font-extrabold text-[#172033]">
+          <h2 className="text-[14px] font-extrabold text-[#172033]">
             Current Internship
-          </h3>
+          </h2>
           <p className="mt-1 text-[10px] font-medium text-gray-400">
             {activeInternship.company?.name || "Your journey"}
           </p>
@@ -938,7 +934,7 @@ const InternshipProgress = ({ internships }) => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -979,15 +975,15 @@ const TodaySchedule = () => {
     },
   ];
   return (
-    <div
+    <section
       className="rounded-[20px] border bg-white p-5"
       style={{ borderColor: COLORS.border }}
     >
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="text-[14px] font-extrabold text-[#172033]">
+          <h2 className="text-[14px] font-extrabold text-[#172033]">
             Today's Schedule
-          </h3>
+          </h2>
           <p className="mt-1 text-[10px] font-medium text-gray-400">
             Sunday, August 23
           </p>
@@ -1031,7 +1027,7 @@ const TodaySchedule = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -1378,7 +1374,7 @@ export default function StudentDashboard() {
           </div>
 
           {/* Footer */}
-          <div className="mt-5 flex flex-col items-center justify-between gap-2 pb-5 text-center sm:flex-row sm:text-left">
+          <footer className="mt-5 flex flex-col items-center justify-between gap-2 pb-5 text-center sm:flex-row sm:text-left">
             <p className="text-[9px] font-medium text-gray-400">
               Tadreeby helps you stay on track throughout your field training.
             </p>
@@ -1390,7 +1386,7 @@ export default function StudentDashboard() {
             >
               View full attendance <ArrowUpRight size={11} />
             </button>
-          </div>
+          </footer>
         </div>
       </main>
     </div>

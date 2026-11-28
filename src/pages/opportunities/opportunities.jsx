@@ -12,7 +12,6 @@ import {
   Clock,
   ChevronDown,
   LayoutDashboard,
-  GraduationCap,
   Settings,
   BriefcaseBusiness,
   ListTodo,
@@ -180,7 +179,7 @@ function InternshipCard({ internship, onApply, applying, onViewDetails }) {
     : null;
 
   return (
-    <div
+    <article
       onClick={() => onViewDetails?.(internship.id)}
       className="group cursor-pointer overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl"
     >
@@ -205,9 +204,9 @@ function InternshipCard({ internship, onApply, applying, onViewDetails }) {
       </div>
 
       <div className="p-5">
-        <h3 className="mb-4 text-lg font-bold leading-snug text-gray-900">
+        <h2 className="mb-4 text-lg font-bold leading-snug text-gray-900">
           {internship.title}
-        </h3>
+        </h2>
 
         <div className="mb-4 flex items-center gap-2">
           <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#EAF3FF] text-[#1677FF]">
@@ -312,7 +311,7 @@ function InternshipCard({ internship, onApply, applying, onViewDetails }) {
           </Button>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 

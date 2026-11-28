@@ -1,18 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../layout/Header";
 import { Button } from "../components/common/Button";
-import logo from "../assets/logo.svg";
 import {
   FileText,
   Shield,
   Lock,
   Cpu,
-  BookOpen,
-  ArrowUp,
-  CheckCircle2,
   Calendar,
-  ExternalLink,
   ChevronRight,
   Info,
 } from "lucide-react";

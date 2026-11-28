@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 * {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* ============================================================ */
@@ -14,52 +13,52 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        font-family: 'Inter', system-ui, sans-serif;
-    }
+  html {
+    font-family: "Inter", system-ui, sans-serif;
+  }
 
-    body {
-        @apply bg-[#F9FAFB] text-[#1E2939] antialiased;
-    }
+  body {
+    @apply bg-[#F9FAFB] text-[#1E2939] antialiased;
+  }
 
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-        width: 5px;
-        height: 5px;
-    }
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
 
-    ::-webkit-scrollbar-track {
-        @apply bg-transparent;
-    }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
 
-    ::-webkit-scrollbar-thumb {
-        @apply rounded-full bg-gray-300;
-    }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-gray-300;
+  }
 
-    ::-webkit-scrollbar-thumb:hover {
-        @apply bg-gray-400;
-    }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400;
+  }
 }
 
 @layer utilities {
-    .font-inter {
-        font-family: 'Inter', system-ui, sans-serif;
-    }
+  .font-inter {
+    font-family: "Inter", system-ui, sans-serif;
+  }
 
-    /* Animation for notifications */
-    @keyframes pulse-dot {
-        0%,
-        100% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.15);
-        }
+  /* Animation for notifications */
+  @keyframes pulse-dot {
+    0%,
+    100% {
+      transform: scale(1);
     }
+    50% {
+      transform: scale(1.15);
+    }
+  }
 
-    .animate-pulse-dot {
-        animation: pulse-dot 2s ease-in-out infinite;
-    }
+  .animate-pulse-dot {
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
 }
 
 /* Your custom glass‑header classes can stay as they are */
@@ -67,53 +66,58 @@
 
 /* Custom reusable glass header class */
 
-    .header-transparent {
+.header-transparent {
   background: transparent;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .glass-header {
-    /* Stick to top with spacing */
-    position: sticky;
-    top: 1rem;
-    left: 1rem;
-    right: 1rem;
-    z-index: 50;           /* mb-10 */
-    
-    /* Layout & typography */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;font-size: 1rem;
-    line-height: 1.5;
-    
-    /* Spacing */
-    padding: 0.75rem 1.5rem;          /* py-3 px-6 */
-    }
-  .glassi{
-    /* Glass‑morphism effect */
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(8px);       /* backdrop-blur-md */
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.4); /* border-white/40 */
-    border-radius: 1rem;              /* rounded-2xl */
-  }
-  .shadowi {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-                0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
-  }
+  /* Stick to top with spacing */
+  position: sticky;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 50; /* mb-10 */
+
+  /* Layout & typography */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  /* Spacing */
+  padding: 0.75rem 1.5rem; /* py-3 px-6 */
+}
+.glassi {
+  /* Glass‑morphism effect */
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px); /* backdrop-blur-md */
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4); /* border-white/40 */
+  border-radius: 1rem; /* rounded-2xl */
+}
+.shadowi {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+}
 
 /* Responsive padding: sm:px-10 (min-width: 640px) */
-@media (max-width: 1090px){
+@media (max-width: 1090px) {
   .glass-header {
     /* Glass‑morphism effect */
     background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(8px);       /* backdrop-blur-md */
+    backdrop-filter: blur(8px); /* backdrop-blur-md */
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.4); /* border-white/40 */
-    border-radius: 1rem;         /* py-3 px-4 */
+    border-radius: 1rem; /* py-3 px-4 */
 
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-                0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
   }
 }
 
@@ -168,7 +172,8 @@
 }
 
 @keyframes floatSlow {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -177,7 +182,8 @@
 }
 
 @keyframes pulseSubtle {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
   }
@@ -197,7 +203,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -206,7 +213,8 @@
 }
 
 @keyframes floatReverse {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -254,11 +262,15 @@
 
 /* Hover Lift Card Effect */
 .hover-lift {
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .hover-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px -4px rgba(22, 119, 255, 0.12), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 12px 24px -4px rgba(22, 119, 255, 0.12),
+    0 4px 12px -2px rgba(0, 0, 0, 0.04);
 }
 
 /* Glassmorphism Card Utility */

@@ -502,11 +502,11 @@ export default function TrainerDashboard() {
               <CalendarCard />
             </aside>
           </div>
-          <div className="mt-5 pb-5 text-center sm:text-left">
+          <footer className="mt-5 pb-5 text-center sm:text-left">
             <p className="text-[9px] font-medium text-gray-400">
               Tadreeby helps you stay on track throughout your field training.
             </p>
-          </div>
+          </footer>
         </div>
       </main>
     </div>

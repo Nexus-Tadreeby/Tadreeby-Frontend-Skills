@@ -339,12 +339,14 @@ export default function StudentChats() {
         storageKey="sidebar-student"
       />
       <main className="flex-1 overflow-hidden p-4">
+        <h1 className="sr-only">Chats</h1>
         <div
           className="flex h-full w-full overflow-hidden rounded-[24px] border bg-white shadow-sm"
           style={{ borderColor: COLORS.border }}
         >
           {/* 1. Chat List - نفس ستايل Dashboard */}
-          <div
+          <section
+            aria-label="Conversations"
             className="flex w-[320px] shrink-0 flex-col border-r"
             style={{ borderColor: COLORS.border }}
           >
@@ -361,9 +363,9 @@ export default function StudentChats() {
                 />
               </div>
               <div className="flex items-center justify-between pb-2">
-                <h3 className="text-[13px] font-extrabold text-[#172033]">
+                <h2 className="text-[13px] font-extrabold text-[#172033]">
                   Unread <span className="ml-1 text-gray-400">2</span>
-                </h3>
+                </h2>
                 <Filter
                   size={14}
                   className="cursor-pointer text-gray-400 hover:text-[#0475FB]"
@@ -394,9 +396,9 @@ export default function StudentChats() {
                   </div>
                   <div className="flex-1 overflow-hidden">
                     <div className="flex items-center justify-between">
-                      <h4 className="truncate text-[13px] font-bold text-[#172033]">
+                      <h3 className="truncate text-[13px] font-bold text-[#172033]">
                         {chat.name}
-                      </h4>
+                      </h3>
                       <span className="text-[10px] font-semibold text-gray-400">
                         {chat.time}
                       </span>
@@ -415,12 +417,12 @@ export default function StudentChats() {
                 </div>
               ))}
             </div>
-          </div>
+          </section>
 
           {/* 2. Chat Area - بنفس أسلوب Dashboard */}
-          <div className="flex flex-1 flex-col">
+          <section aria-label="Conversation" className="flex flex-1 flex-col">
             {/* Header */}
-            <div
+            <header
               className="flex h-[72px] shrink-0 items-center justify-between border-b px-6"
               style={{ borderColor: COLORS.border }}
             >
@@ -453,7 +455,7 @@ export default function StudentChats() {
                   <MoreHorizontal size={16} className="text-gray-400" />
                 </button>
               </div>
-            </div>
+            </header>
 
             {/* Messages */}
             <div className="flex-1 overflow-y-auto bg-[#F9FAFD] p-6">
@@ -574,16 +576,17 @@ export default function StudentChats() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* 3. Info Panel - مع تحسينات التصميم */}
-          <div
+          <aside
+            aria-label="Conversation details"
             className="w-[280px] shrink-0 border-l bg-[#F9FAFD] p-6 overflow-y-auto"
             style={{ borderColor: COLORS.border }}
           >
-            <h3 className="mb-6 flex items-center gap-2 text-[14px] font-extrabold text-[#172033]">
+            <h2 className="mb-6 flex items-center gap-2 text-[14px] font-extrabold text-[#172033]">
               <ChevronRight size={16} className="text-gray-400" /> General Info
-            </h3>
+            </h2>
 
             <div className="rounded-2xl border border-gray-200 bg-white p-5 text-center shadow-sm">
               <div className="mx-auto mb-3 h-16 w-16 overflow-hidden rounded-full border-2 border-white shadow-md">
@@ -596,9 +599,9 @@ export default function StudentChats() {
               <span className="mb-2 inline-flex items-center rounded-full bg-[#FFF4E5] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#D97706]">
                 Supervisor
               </span>
-              <h4 className="text-[15px] font-extrabold text-[#172033]">
+              <h3 className="text-[15px] font-extrabold text-[#172033]">
                 {activeChat.name}
-              </h4>
+              </h3>
               <p className="mt-1 text-[11px] font-medium text-gray-500">
                 {activeChat.role}
               </p>
@@ -635,9 +638,9 @@ export default function StudentChats() {
             <hr className="my-6 border-gray-200" />
 
             <div className="flex items-center justify-between mb-3">
-              <h4 className="text-[12px] font-extrabold text-[#172033]">
+              <h3 className="text-[12px] font-extrabold text-[#172033]">
                 Notes
-              </h4>
+              </h3>
               <button className="text-[11px] font-bold text-[#0475FB]">
                 Add
               </button>
@@ -652,7 +655,7 @@ export default function StudentChats() {
                 Aug 20, 2026
               </p>
             </div>
-          </div>
+          </aside>
         </div>
       </main>
     </div>
